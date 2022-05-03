@@ -1,13 +1,23 @@
 package com.bank.banklineapi.model;
 
 import java.time.LocalDateTime;
+import javax.persistence.*;
 
+@Entity
+@Table(name = "tab_movimentacao")
 public class Movimentacao {
     
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private LocalDateTime dataHora;
+    
+	@Column(name = "data_hora")
+    private LocalDateTime dataHora;  
+	
     private String descricao;
     private Double valor;
+    
+    @Enumerated(EnumType.STRING)
     private MovimentacaoTipo tipo;
 
     public int getId() {
