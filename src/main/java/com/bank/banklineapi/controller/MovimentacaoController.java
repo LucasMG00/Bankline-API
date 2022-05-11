@@ -34,4 +34,9 @@ public class MovimentacaoController {
 		
 	}
 	
+	@GetMapping("/{idConta}")
+	public List<Movimentacao> findAll(@PathVariable("idConta") Integer idConta){
+		return repository.findByIdConta(idConta);
+	}
+	
 }
