@@ -2,55 +2,23 @@ package com.bank.banklineapi.model;
 
 import javax.persistence.*;
 
+import lombok.*;
+
 @Entity
 @Table(name = "tab_correntista")
 public class Correntista {
    
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+	@Getter @Setter private int id;
 	
 	@Column(length = 20)
-    private String cpf;
+	@Getter @Setter private String cpf;
 	
 	@Column(length = 60)
-    private String nome;
+	@Getter @Setter private String nome;
 
 	@Embedded
-    private Conta conta;
-    
-    public Conta getConta() {
-        return conta;
-    }
-
-    public void setConta(Conta conta) {
-        this.conta = conta;
-    }
-    
-    
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getCpf() {
-        return cpf;
-    }
-
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-    
+	@Getter @Setter private Conta conta;
     
 }
