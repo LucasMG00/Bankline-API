@@ -3,11 +3,12 @@ package com.bank.banklineapi.dto;
 import com.bank.banklineapi.model.MovimentacaoTipo;
 import lombok.*;
 
+@Getter @Setter
 public class NovaMovimentacao {
 
-	@Getter @Setter private String descricao;
-	@Getter @Setter private Double valor;
-	@Getter @Setter private MovimentacaoTipo tipo;
-	@Getter @Setter private int idConta;
+	private String descricao;
+	private Double valor;
+	private MovimentacaoTipo tipo;
+	private int idConta;
 	
 }

@@ -2,9 +2,10 @@ package com.bank.banklineapi.dto;
 
 import lombok.*;
 
+@Getter @Setter
 public class NovoCorrentista {
 
-	@Getter @Setter private String nome;
-	@Getter @Setter private String cpf;
+	private String nome;
+	private String cpf;
 	
 }

@@ -4,21 +4,22 @@ import javax.persistence.*;
 
 import lombok.*;
 
+@Getter @Setter
 @Entity
 @Table(name = "tab_correntista")
 public class Correntista {
    
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Getter @Setter private int id;
+	private int id;
 	
 	@Column(length = 20)
-	@Getter @Setter private String cpf;
+	private String cpf;
 	
 	@Column(length = 60)
-	@Getter @Setter private String nome;
+	private String nome;
 
 	@Embedded
-	@Getter @Setter private Conta conta;
+	private Conta conta;
     
 }

@@ -4,13 +4,14 @@ import javax.persistence.*;
 
 import lombok.*;
 
+@Getter @Setter
 @Embeddable
 public class Conta {
     
 	@Column(name = "conta_numero")
-	@Getter @Setter private Long numero;
+	private Long numero;
 	
 	@Column(name = "conta_saldo")
-	@Getter @Setter private Double saldo;
+	private Double saldo;
 
 }
